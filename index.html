@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Users</title>
+    <style>
+        .item {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: left;
+        border-radius: 10px;
+    }
+    .item:hover {
+        background-color: rgba(223, 223, 223, 0.486);
+    }
+    .item h3 {
+        margin: 0;
+        font: 10px sans-serif;
+        font-weight:700;
+        text-align: center;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    /* ____________________________________________________________________ */
+    .item2 {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: left;
+        border-radius: 10px;
+    }
+    .item2:hover {
+        background-color: rgba(223, 223, 223, 0.486);
+    }
+    .item2 h3 {
+        margin: 0;
+        font: 10px sans-serif;
+        font-weight:700;
+        text-align: center;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    /* ____________________________________________________________________ */
+    .item2 {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: left;
+        border-radius: 10px;
+    }
+    .item2:hover {
+        background-color: rgba(223, 223, 223, 0.486);
+    }
+    .item2 h3 {
+        margin: 0;
+        font: 10px sans-serif;
+        font-weight:700;
+        text-align: center;
+        justify-content: center;
+        align-items: flex-start;
+    }
+/* ____________________________________________________________________ */
+    .item3 {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: left;
+        border-radius: 10px;
+    }
+    .item3:hover {
+        background-color: rgba(223, 223, 223, 0.486);
+    }
+    .item3 h3 {
+        margin: 0;
+        font: 10px sans-serif;
+        font-weight:700;
+        text-align: center;
+        justify-content: center;
+        align-items: flex-start;
+    }
+/* ____________________________________________________________________ */
+    .item4 {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: left;
+        border-radius: 10px;
+    }
+    .item4:hover {
+        background-color: rgba(223, 223, 223, 0.486);
+    }
+    .item4 h3 {
+        margin: 0;
+        font: 10px sans-serif;
+        font-weight:700;
+        text-align: center;
+        justify-content: center;
+        align-items: flex-start;
+    }
+/* ____________________________________________________________________ */
+    .item5 {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: left;
+        border-radius: 10px;
+    }
+    .item5:hover {
+        background-color: rgba(223, 223, 223, 0.486);
+    }
+    .item5 h3 {
+        margin: 0;
+        font: 10px sans-serif;
+        font-weight:700;
+        text-align: center;
+        justify-content: center;
+        align-items: flex-start;
+    }
+/* ____________________________________________________________________ */
+    .item6 {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: left;
+        border-radius: 10px;
+    }
+    .item6:hover {
+        background-color: rgba(223, 223, 223, 0.486);
+    }
+    .item6 h3 {
+        margin: 0;
+        font: 10px sans-serif;
+        font-weight:700;
+        text-align: center;
+        justify-content: center;
+        align-items: flex-start;
+    }
+/* ____________________________________________________________________ */
+    .item7 {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: left;
+        border-radius: 10px;
+    }
+    .item7:hover {
+        background-color: rgba(223, 223, 223, 0.486);
+    }
+    .item7 h3 {
+        margin: 0;
+        font: 10px sans-serif;
+        font-weight:700;
+        text-align: center;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+/* ____________________________________________________________________ */
+    </style>
+</head>
+
+<body>
+    <h1><b>Users Table</b></h1>
+    <div id="favorites"></div>
+    <script type="text/babel">
+
+        class FavoriteItem extends React.Component {
+            render() {
+                let imageStyle = {
+                backgroundImage: "url(https://reqres.in/img/faces/7-image.jpg)",
+                width: 100,
+                height: 100,
+                backgroundSize: "contain",
+                backgroundPosition: "center center"
+            }
+                return (
+                    <div className="item">
+                        <div className="item-icon" style={imageStyle}></div>
+                        <h3>id: 7, first_name: Michael, last_name: Lawson, email: lindsay.ferguson@reqres.in</h3>
+                    </div>
+                )
+            }
+
+        }
+        /* ____________________________________________________________________________________________________________________________________________ */
+        class FavoriteItem2 extends React.Component {
+            render() {
+                let imageStyle = {
+                backgroundImage: "url(https://reqres.in/img/faces/8-image.jpg)",
+                width: 100,
+                height: 100,
+                backgroundSize: "contain",
+                backgroundPosition: "center center"
+            }
+                return (
+                    <div className="item2">
+                        <div className="item-icon" style={imageStyle}></div>
+                        <h3>id: 8, first_name: Lindsay, last_name: Ferguson, email: lindsay.ferguson@reqres.in</h3>
+                    </div>
+                )
+            }
+
+        }
+        /* ____________________________________________________________________________________________________________________________________________ */
+        class FavoriteItem3 extends React.Component {
+            render() {
+                let imageStyle = {
+                backgroundImage: "url(https://reqres.in/img/faces/9-image.jpg)",
+                width: 100,
+                height: 100,
+                backgroundSize: "contain",
+                backgroundPosition: "center center"
+            }
+                return (
+                    <div className="item3">
+                        <div className="item-icon" style={imageStyle}></div>
+                        <h3>id: 9, first_name: Tobias, last_name: Funke, email: lindsay.ferguson@reqres.in</h3>
+                    </div>
+                )
+            }
+
+        }
+        /* ____________________________________________________________________________________________________________________________________________ */
+        class FavoriteItem4 extends React.Component {
+            render() {
+                let imageStyle = {
+                backgroundImage: "url(https://reqres.in/img/faces/10-image.jpg)",
+                width: 100,
+                height: 100,
+                backgroundSize: "contain",
+                backgroundPosition: "center center"
+            }
+                return (
+                    <div className="item4">
+                        <div className="item-icon" style={imageStyle}></div>
+                        <h3>id: 10, first_name: Byron, last_name: Fields, email: byron.fields@reqres.in</h3>
+                    </div>
+                )
+            }
+
+        }
+        /* ____________________________________________________________________________________________________________________________________________ */
+        class FavoriteItem5 extends React.Component {
+            render() {
+                let imageStyle = {
+                backgroundImage: "url(https://reqres.in/img/faces/11-image.jpg)",
+                width: 100,
+                height: 100,
+                backgroundSize: "contain",
+                backgroundPosition: "center center"
+            }
+                return (
+                    <div className="item5">
+                        <div className="item-icon" style={imageStyle}></div>
+                        <h3>id: 11, first_name: George, last_name: Edwards, email: george.edwards@reqres.in</h3>
+                    </div>
+                )
+            }
+
+        }
+        /* ____________________________________________________________________________________________________________________________________________ */
+        class FavoriteItem6 extends React.Component {
+            render() {
+                let imageStyle = {
+                backgroundImage: "url(https://reqres.in/img/faces/12-image.jpg)",
+                width: 100,
+                height: 100,
+                backgroundSize: "contain",
+                backgroundPosition: "center center"
+            }
+                return (
+                    <div className="item6">
+                        <div className="item-icon" style={imageStyle}></div>
+                        <h3>id: 12, first_name: Rachel, last_name: Howell, email: rachel.howell@reqres.in</h3>
+                    </div>
+                )
+            }
+
+        }
+        /* ____________________________________________________________________________________________________________________________________________ */
+        class FavoriteItem7 extends React.Component {
+            render() {
+                let imageStyle = {
+                backgroundImage: "url(https://reqres.in/#support-heading)",
+                width: 100,
+                height: 100,
+                backgroundSize: "contain",
+                backgroundPosition: "center center"
+            }
+                return (
+                    <div className="item7">
+                        <div className="item-icon" style={imageStyle}></div>
+                        <h3>phrase: To keep ReqRes free, contributions towards server costs are appreciated!</h3>
+                    </div>
+                )
+            }
+
+        }
+        ReactDOM.render(
+            <div>
+                <FavoriteItem />
+                <FavoriteItem2 />
+                <FavoriteItem3 />
+                <FavoriteItem4 />
+                <FavoriteItem5 />
+                <FavoriteItem6 />
+                <FavoriteItem7 />
+            </div>,
+            document.getElementById("favorites")
+        );
+
+    </script>
+</body>
+</html>
