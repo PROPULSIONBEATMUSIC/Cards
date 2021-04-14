@@ -7,7 +7,6 @@
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <link rel="stylesheet" href="style.css">
     <title>Users</title>
     <style>
         .item {
@@ -192,10 +191,10 @@
 
 <body>
     <h1><b>Users Table</b></h1>
-    <div id="favorites"></div>
+    <div id="ites"></div>
     <script type="text/babel">
 
-        class FavoriteItem extends React.Component {
+        class Item extends React.Component {
             render() {
                 let imageStyle = {
                 backgroundImage: "url(https://reqres.in/img/faces/7-image.jpg)",
@@ -214,7 +213,7 @@
 
         }
         /* ____________________________________________________________________________________________________________________________________________ */
-        class FavoriteItem2 extends React.Component {
+        class Item2 extends React.Component {
             render() {
                 let imageStyle = {
                 backgroundImage: "url(https://reqres.in/img/faces/8-image.jpg)",
@@ -233,7 +232,7 @@
 
         }
         /* ____________________________________________________________________________________________________________________________________________ */
-        class FavoriteItem3 extends React.Component {
+        class Item3 extends React.Component {
             render() {
                 let imageStyle = {
                 backgroundImage: "url(https://reqres.in/img/faces/9-image.jpg)",
@@ -252,7 +251,7 @@
 
         }
         /* ____________________________________________________________________________________________________________________________________________ */
-        class FavoriteItem4 extends React.Component {
+        class Item4 extends React.Component {
             render() {
                 let imageStyle = {
                 backgroundImage: "url(https://reqres.in/img/faces/10-image.jpg)",
@@ -271,7 +270,7 @@
 
         }
         /* ____________________________________________________________________________________________________________________________________________ */
-        class FavoriteItem5 extends React.Component {
+        class Item5 extends React.Component {
             render() {
                 let imageStyle = {
                 backgroundImage: "url(https://reqres.in/img/faces/11-image.jpg)",
@@ -290,7 +289,7 @@
 
         }
         /* ____________________________________________________________________________________________________________________________________________ */
-        class FavoriteItem6 extends React.Component {
+        class Item6 extends React.Component {
             render() {
                 let imageStyle = {
                 backgroundImage: "url(https://reqres.in/img/faces/12-image.jpg)",
@@ -309,7 +308,7 @@
 
         }
         /* ____________________________________________________________________________________________________________________________________________ */
-        class FavoriteItem7 extends React.Component {
+        class Item7 extends React.Component {
             render() {
                 let imageStyle = {
                 backgroundImage: "url(https://reqres.in/#support-heading)",
@@ -329,15 +328,15 @@
         }
         ReactDOM.render(
             <div>
-                <FavoriteItem />
-                <FavoriteItem2 />
-                <FavoriteItem3 />
-                <FavoriteItem4 />
-                <FavoriteItem5 />
-                <FavoriteItem6 />
-                <FavoriteItem7 />
+                <Item />
+                <Item2 />
+                <Item3 />
+                <Item4 />
+                <Item5 />
+                <Item6 />
+                <Item7 />
             </div>,
-            document.getElementById("favorites")
+            document.getElementById("ites")
         );
 
     </script>
